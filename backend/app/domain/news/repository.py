@@ -2,7 +2,8 @@
 
 [Feature: News Management] [Story: NM-PUBLIC-001] [Ticket: NM-PUBLIC-001-BE-T01]
 """
-from typing import Protocol
+from typing import Optional, Protocol
+from uuid import UUID
 
 from app.domain.news.entity import News
 
@@ -23,5 +24,17 @@ class NewsRepository(Protocol):
             
         Returns:
             Tuple of (list of News entities, total count)
+        """
+        ...
+
+    # [Feature: News Management] [Story: NM-PUBLIC-002] [Ticket: NM-PUBLIC-002-BE-T01]
+    def get_published_by_id(self, news_id: UUID) -> Optional[News]:
+        """Get a published news article by ID.
+        
+        Args:
+            news_id: The UUID of the news article
+            
+        Returns:
+            News entity if found and published, None otherwise
         """
         ...

@@ -28,3 +28,15 @@ class NewsListResponse(BaseModel):
     total: int
     page: int = Field(ge=1)
     page_size: int = Field(ge=1, le=50)
+
+
+# [Feature: News Management] [Story: NM-PUBLIC-002] [Ticket: NM-PUBLIC-002-BE-T01]
+class NewsDetailResponse(BaseModel):
+    """Schema for a single news article detail response."""
+    id: UUID
+    title: str
+    content: str
+    author_name: str
+    published_at: datetime | None
+
+    model_config = ConfigDict(from_attributes=True)

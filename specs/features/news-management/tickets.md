@@ -107,7 +107,7 @@ This document contains all implementation tickets for the **News Management** fe
 
 ### Tickets for NM-PUBLIC-002
 
-1. - [ ] **NM-PUBLIC-002-BE-T01 — GET /api/v1/news/{id} Endpoint (Detail)**
+1. - [x] **NM-PUBLIC-002-BE-T01 — GET /api/v1/news/{id} Endpoint (Detail)** (2026-02-04)
    - **Type:** BE
    - **Description:** Implement API endpoint to retrieve a single published news article by ID. Supports scenarios: Public visitor reads published article, Article does not exist, Draft article not accessible to public, Performance budget.
    - **Scope:**

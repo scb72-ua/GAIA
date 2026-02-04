@@ -88,3 +88,14 @@ This file tracks all workflow executions and milestones achieved in the project.
   - `frontend/src/app/` (router, layout, providers)
 - **Notes**: Created news list page with React Query, Tailwind CSS, semantic HTML. Build passes.
 - **Verification**: `cd frontend && npm run dev` → http://localhost:5188/noticias
+
+---
+
+- **Date**: 2026-02-04
+- **Milestone**: Executed plan NM-PUBLIC-002-BE-T01 (workflow: /execute-plan)
+- **Artifacts**:
+  - `backend/app/application/news/get_detail.py` (GetPublishedNewsDetailUseCase)
+  - `backend/app/presentation/news/router.py` (GET /api/v1/news/{id})
+  - `backend/tests/` (3 unit + 4 API tests)
+- **Notes**: Implemented news detail endpoint with 404 for drafts (no data leakage). Tests: 7/7 passed.
+- **Verification**: `curl http://localhost:8005/api/v1/news/{id} | jq`

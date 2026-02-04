@@ -2,6 +2,9 @@
 
 [Feature: News Management] [Story: NM-PUBLIC-001] [Ticket: NM-PUBLIC-001-BE-T01]
 """
+from typing import Optional
+from uuid import UUID
+
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
@@ -59,6 +62,27 @@ class SQLAlchemyNewsRepository:
         ]
 
         return news_list, total
+
+    # [Feature: News Management] [Story: NM-PUBLIC-002] [Ticket: NM-PUBLIC-002-BE-T01]
+    def get_published_by_id(self, news_id: UUID) -> Optional[News]:
+        """Get a published news article by ID.
+        
+        Returns None if article doesn't exist OR if it's not published.
+        This prevents information disclosure about draft articles.
+        """
+        query = (
+            select(NewsModel)
+            .join(UserModel, NewsModel.author_id == UserModel.id)
+            .where(NewsModel.id == news_id)
+            .where(NewsModel.status == "published")
+        )
+        
+        result = self._session.execute(query).scalar_one_or_none()
+        
+        if result is None:
+            return None
+            
+        return self._to_domain(result)
 
     def _to_domain(self, model: NewsModel) -> News:
         """Convert SQLAlchemy model to domain entity."""
