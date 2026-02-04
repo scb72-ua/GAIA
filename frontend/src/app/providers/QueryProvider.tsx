@@ -10,6 +10,7 @@ const queryClient = new QueryClient({
     queries: {
       staleTime: 30 * 1000, // 30 seconds
       retry: 1,
+      refetchOnWindowFocus: false, // Don't refetch when tab regains focus
     },
   },
 });
