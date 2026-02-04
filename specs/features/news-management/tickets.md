@@ -73,7 +73,7 @@ This document contains all implementation tickets for the **News Management** fe
 
 ---
 
-3. - [ ] **NM-PUBLIC-001-FE-T01 — News List Page Component**
+3. - [x] **NM-PUBLIC-001-FE-T01 — News List Page Component** (2026-02-04)
    - **Type:** FE
    - **Description:** Implement the public news list page with pagination and empty state. Supports scenarios: Public visitor views news list, No published news available, Accessibility.
    - **Scope:**

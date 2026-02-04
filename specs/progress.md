@@ -77,3 +77,14 @@ This file tracks all workflow executions and milestones achieved in the project.
   - `backend/tests/` (5 unit + 6 API tests)
 - **Notes**: Implemented GET /api/v1/news with pagination. Tests: 11/11 passed.
 - **Verification**: `curl http://localhost:8005/api/v1/news | jq`
+
+---
+
+- **Date**: 2026-02-04
+- **Milestone**: Executed plan NM-PUBLIC-001-FE-T01 (workflow: /execute-plan)
+- **Artifacts**:
+  - `frontend/` (new Vite React TypeScript project)
+  - `frontend/src/features/news/` (types, API, hooks, components, pages)
+  - `frontend/src/app/` (router, layout, providers)
+- **Notes**: Created news list page with React Query, Tailwind CSS, semantic HTML. Build passes.
+- **Verification**: `cd frontend && npm run dev` → http://localhost:5188/noticias
