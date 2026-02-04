@@ -129,7 +129,7 @@ This document contains all implementation tickets for the **News Management** fe
 
 ---
 
-2. - [ ] **NM-PUBLIC-002-FE-T01 — News Detail Page Component**
+2. - [x] **NM-PUBLIC-002-FE-T01 — News Detail Page Component** (2026-02-04)
    - **Type:** FE
    - **Description:** Implement the news article detail page with full content display. Supports scenarios: Public visitor reads published article, Article does not exist, Accessibility.
    - **Scope:**

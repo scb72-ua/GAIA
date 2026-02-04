@@ -99,3 +99,14 @@ This file tracks all workflow executions and milestones achieved in the project.
   - `backend/tests/` (3 unit + 4 API tests)
 - **Notes**: Implemented news detail endpoint with 404 for drafts (no data leakage). Tests: 7/7 passed.
 - **Verification**: `curl http://localhost:8005/api/v1/news/{id} | jq`
+
+---
+
+- **Date**: 2026-02-04
+- **Milestone**: Executed plan NM-PUBLIC-002-FE-T01 (workflow: /execute-plan)
+- **Artifacts**:
+  - `frontend/src/features/news/components/NewsArticle.tsx`
+  - `frontend/src/features/news/pages/NewsDetailPage.tsx`
+  - `frontend/src/app/router/index.tsx`
+- **Notes**: Created news detail page with 404 handling, loading skeleton, and back navigation.
+- **Verification**: http://localhost:5188/noticias/{id}

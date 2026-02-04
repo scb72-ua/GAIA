@@ -17,3 +17,12 @@ export interface NewsListResponse {
   page: number;
   page_size: number;
 }
+
+// [Feature: News Management] [Story: NM-PUBLIC-002] [Ticket: NM-PUBLIC-002-FE-T01]
+export interface NewsDetail {
+  id: string;
+  title: string;
+  content: string;
+  author_name: string;
+  published_at: string | null;
+}
