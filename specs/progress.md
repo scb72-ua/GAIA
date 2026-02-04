@@ -64,3 +64,16 @@ This file tracks all workflow executions and milestones achieved in the project.
   - `specs/ArchitecturalModel.md`
 - **Notes**: Created infrastructure (docker-compose, Alembic), users table stub, news table with indexes. Verified upgrade/downgrade/re-upgrade cycle.
 - **Verification**: `docker compose exec db psql -U postgres -d gaia -c "\dt"` shows users, news tables.
+
+---
+
+- **Date**: 2026-02-04
+- **Milestone**: Executed plan NM-PUBLIC-001-BE-T01 (workflow: /execute-plan)
+- **Artifacts**:
+  - `backend/app/domain/news/` (entity, repository interface)
+  - `backend/app/application/news/` (ListPublishedNewsUseCase)
+  - `backend/app/infrastructure/news/` (SQLAlchemy models, repository)
+  - `backend/app/presentation/news/` (router, DTOs)
+  - `backend/tests/` (5 unit + 6 API tests)
+- **Notes**: Implemented GET /api/v1/news with pagination. Tests: 11/11 passed.
+- **Verification**: `curl http://localhost:8005/api/v1/news | jq`

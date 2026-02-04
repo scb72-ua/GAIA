@@ -46,7 +46,7 @@ This document contains all implementation tickets for the **News Management** fe
 
 ---
 
-2. - [ ] **NM-PUBLIC-001-BE-T01 — GET /api/v1/news Endpoint (List Published)**
+2. - [x] **NM-PUBLIC-001-BE-T01 — GET /api/v1/news Endpoint (List Published)** (2026-02-04)
    - **Type:** BE
    - **Description:** Implement API endpoint to list published news articles with pagination. Supports scenarios: Public visitor views news list, No published news available, Draft articles hidden, Performance budget.
    - **Scope:**
