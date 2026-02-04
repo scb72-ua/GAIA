@@ -61,7 +61,7 @@ export function NewsArticle({ article }: NewsArticleProps) {
       </header>
 
       <div 
-        className="prose prose-lg dark:prose-invert max-w-none"
+        className="text-gray-700 dark:text-gray-200 leading-relaxed [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-4 [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-4 [&>li]:mb-2"
         dangerouslySetInnerHTML={{ __html: article.content }}
       />
     </article>
